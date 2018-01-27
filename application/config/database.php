@@ -60,7 +60,9 @@ else {
 	$db['default']['username'] = 'mindamaz_rssb';
 	$db['default']['password'] = 'wQPA;H[6f90L';
 	$db['default']['database'] = 'mindamaz_rssb';
+	$db['default']['database'] = 'mansha_db';
 }
+
 
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'ma_';

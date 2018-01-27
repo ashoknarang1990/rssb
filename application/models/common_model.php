@@ -175,4 +175,5 @@ class Common_Model extends CI_Model{
     	$this->db->where(array('state_id'=>$id));
     	return  $this->db->get()->result_array();
     }
+
 }

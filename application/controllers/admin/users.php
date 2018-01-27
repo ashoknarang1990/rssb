@@ -42,10 +42,12 @@ class Users extends CI_Controller {
 
                 if(isset($request['pillar_no']) && $request['pillar_no']!='')
                 {
+
                     $condition['User.pillar_no']=$request['pillar_no'];
                 }
 
                 
+
             }
 
             $this->db->where($condition);
@@ -143,7 +145,10 @@ class Users extends CI_Controller {
     }
 	public function edit() {
 
+
 		$return['getstate'] = $this->common_model->get_state();
+		
+
 		$return['header_page_id'] = 'edit_profile';
 		$return['header_page_title'] = 'Edit User';
 		$user_id = $this->uri->segment('4');

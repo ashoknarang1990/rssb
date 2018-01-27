@@ -51,6 +51,22 @@
 									</div>
 								</div>
 								<!-- <div class='span5'>
+=======
+								<div class='span5'>
+									<div class="control-group">											
+										<label class="control-label">Father / Husband Name</label>
+										<div class="controls">
+											<input type="text" data-error="Guardian  name" class='required form-control inp_fetch_text span4' placeholder="Enter Guardian Name" value="<?php echo isset($user_data['guardian_name']) ? $user_data['guardian_name'] : ''?>" name="guardian_name" />
+										</div>				
+									</div>
+								</div>
+								
+								<div class='clearfix'></div>
+							</div>
+							
+							<div class='form-group'>
+							<div class='span5'>
+>>>>>>> 680e006552c9107f1ae2358d5d8ae2cbc9dff659
 									<div class="control-group">											
 										<label class="control-label">Email Address</label>
 										<div class="controls">
@@ -69,10 +85,12 @@
 								
 								<div class='clearfix'></div>
 							</div>
+
 							
 							
 
 							<div class='form-group'>
+
 							 	<div class='span5'>
 									<div class="control-group">											
 										<label class="control-label">Adult</label>
@@ -126,7 +144,9 @@
 
 
 							<div class='form-group'>
-								<div class='span5'>
+
+							<div class='span5'>
+
 									<div class="control-group">											
 										<label class="control-label">Pillar no</label>
 										<div class="controls">

@@ -131,6 +131,7 @@
                         },
                         pillar_no: {
                             title: 'Pillar No',
+
                             width: '15%'
                         },
                         adult: {
