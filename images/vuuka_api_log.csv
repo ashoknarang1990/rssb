@@ -1,0 +1,86 @@
+id,method,log_data,log_date_time
+33037,register,"{
+""first_name"":""Sachin"",
+""last_name"":""Dhawan"",
+""gender"":""Male"",
+""dob"":""1987-03-01"",
+""email"":""sachin+2@soms.in"",
+""password"":""123456"",
+""contact_no"":""""
+}
+",5/27/2017 6:33
+33036,updatecustomerprofile,"{
+""auth_token"":""f5333761e2d9524f5b09e569085256bd"",
+""user_id"":""503"",
+""first_name"": ""sach"",
+""last_name"": ""dha"",
+""gender"": ""Male"",
+""dob"":""1983-05-21"",
+""city"":""Noida"",
+""identity_type"":""1"",
+""identity_no"":""121332"",
+""email"":""sachin+1@soms.in"",
+""contact_no"":""5487788778""
+}
+",5/27/2017 6:28
+33034,register,"{
+""first_name"":""Sachin"",
+""last_name"":""Dhawan"",
+""gender"":""Male"",
+""dob"":""1987-03-01"",
+""email"":""sachin+1@soms.in"",
+""password"":""123456"",
+""contact_no"":""5487788778""
+}
+",5/27/2017 6:25
+33001,updatecustomerprofile,"{
+ ""city"": "" "",
+ ""identity_type"": ""3"",
+ ""device_token"": ""5f80a35c0bd513b9be1f5ee968b3b964fdaf62107acae25cef805497125143d1"",
+ ""last_name"": ""Orija"",
+ ""contact_no"": ""(310)978-7882"",
+ ""device_type"": ""1"",
+ ""auth_token"": ""65c303b2bf94b436aa555f5608694725"",
+ ""email"": ""dimejiorija@hotmail.com"",
+ ""first_name"": ""Oladimeji"",
+ ""gender"": ""Male"",
+ ""identity_no"": ""D5316826"",
+ ""user_id"": ""497"",
+ ""dob"": ""1987-05-10""
+}",5/26/2017 16:30
+32949,register,"{
+ ""dob"": ""1989-05-31"",
+ ""first_name"": ""Isa"",
+ ""last_name"": ""Wickham"",
+ ""gender"": ""Female"",
+ ""password"": ""Cosmosally2016!"",
+ ""email"": ""isawickham1@gmail.com"",
+ ""contact_no"": """"
+}",5/26/2017 12:10
+32871,register,"{
+ ""dob"": ""1991-05-29"",
+ ""first_name"": ""Eduard"",
+ ""last_name"": ""Vilenskiy"",
+ ""gender"": ""Male"",
+ ""password"": ""Macbook91"",
+ ""email"": ""edvil91@vuuka.com"",
+ ""contact_no"": """"
+}",5/26/2017 11:47
+32870,register,"{
+ ""dob"": ""1991-05-29"",
+ ""first_name"": ""Eduard"",
+ ""last_name"": ""Vilenskiy"",
+ ""gender"": ""Male"",
+ ""password"": ""Macbook91"",
+ ""email"": ""edvil91@yahoo.com"",
+ ""contact_no"": """"
+}",5/26/2017 11:47
+32758,register,"{
+ ""dob"": ""1972-05-25"",
+ ""first_name"": ""Fly"",
+ ""last_name"": ""Erson"",
+ ""gender"": ""Not specify"",
+ ""password"": ""appletest"",
+ ""email"": ""flyflyerson@gmail.com"",
+ ""contact_no"": """"
+}",5/25/2017 6:03

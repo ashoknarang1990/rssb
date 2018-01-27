@@ -1,0 +1,63 @@
+@media (max-width:1199px){
+	.normal-menu .menu-content li a{padding:0 10px; font-size:12px;}	.login{text-align:center;margin-top: 3px;}	.login .fa{ margin-right:0; margin-bottom:5px;}	.login span{display:block;}
+}
+@media (max-width:991px){
+	#top-bar, .top-bar-list{text-align:center;}
+	.menu-vertical, .login-left, .top-message{display:none;}
+	.rotating-banner{padding-left:0;}
+	.normal-menu{clear:both;}
+	.mega-menu, .rotating-banner img, .wps-gaurantee .box-iner .text, .wps-gaurantee .box-iner, .normal-menu, .container{width:100%;}
+
+	#top-bar{background:#fbfbfb;}		.normal-menu{background: #5a5a5a;}
+	.rotating-banner img{height:auto;}
+	.wps-gaurantee .box-iner .icon{float:none; margin:0 auto 10px;}
+	.wps-gaurantee .box-iner .text {padding-left: 0;text-align: center;}
+	.wps-gaurantee .box-iner .text h3{font-size:12px;}
+	.wps-gaurantee .box-iner .text p{font-size:11px;}
+
+	.login-pop .modal-dialog{width:auto;}
+	.login-pop .modal-body {padding: 15px 10px;}
+}
+@media (max-width:767px){
+	.top-message, .normal-menu .menu-content{display:none;}
+	.normal-menu .menu-content li{width:50%;}
+	.menu-vertical .sub-menu > li, .menu-vertical .sub-menu{width:100%;}
+	.top-bar-list{margin-top:0;}
+	#mega-deal-grid .text{text-align:center;}
+	#mega-deal-grid .text h1{font-size:24px;}
+	#mega-deal-grid .text .box-price{font-size:14px;}
+	#mega-deal-grid .text h1{margin-bottom:15px;}
+	#mega-deal-grid .text .links{font-size: 12px; padding: 20px 17px; margin-bottom:15px;}
+	#mega-deal-grid .text p{font-size:12px;}
+	#mobile-menu{display:block;color: #fff;font-size: 16px;font-weight: 700;line-height: 53px; height:50px;padding: 0 18px;position: relative;text-transform: uppercase;}
+	#mobile-menu i {position: absolute;right: 13px;top: 17px;}
+	
+	.normal-menu .menu-content{background:#696969;}		.normal-menu .menu-content li a{padding:0 20px;}
+	.menu-vertical, .menu-vertical .sub-menu{position:relative;}
+	.menu-vertical .sub-menu{left:0; display:block;background:#f6f6f6;}
+	/* .menu-vertical .menu-content > li:hover .sub-menu{display:none;} */
+}
+@media (max-width:600px){
+	#logo span, .wps-gaurantee{display:none;}
+	.explore-cat, #footer .col-md-3{width:100%;}
+	#footer h3, .rotating-banner .banner-content strong{font-size:14px;}
+	.rotating-banner .banner-content p{font-size:12px;}
+	#footer ul li a, #laberContact p{font-size:12px;}
+	
+	.laberFooter-bottom .col-xs-6{width:100%; text-align:center;}
+	.laberFooter-bottom .laberSocial{margin-top:20px;}
+	.rotating-banner .banner-content {left: 0;position: relative;top: 0; padding:1em 1em 4em; text-align:center;background: #02b706 none repeat scroll 0 0;}
+	.rotating-banner .banner-content a{padding: 8px 12px; font-size:10px;}
+	#banner-grid{background:none;}
+	#mega-deal-grid{padding:2em 0;}
+	.explore-cat {padding-bottom: 1em;padding-top: 1em;}
+	#footer .col-md-3{border-bottom: 1px solid #121212; padding-bottom: 1em;}
+	.laberFooter-bottom{margin-top:0; border:none;}
+}
+@media (max-width:360px){
+	.login-pop .nav-tabs li span{font-size: 11px;}
+	.login-pop .modal-body .nav-tabs > li > a {
+    margin-right: 16px;
+    font-size: 15px;}
+	
+}
