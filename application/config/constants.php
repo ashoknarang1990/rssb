@@ -48,7 +48,7 @@ if(isset($_SERVER['SERVER_NAME']))
 			define('SITE_PATH','http://localhost/rssb/');
 			
 	}else{
-		define('SITE_PATH','http://103.21.59.168/~mindamaz');
+		define('SITE_PATH','http://103.21.59.168/~mindamaz/');
 		
 	}	
 
