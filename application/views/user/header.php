@@ -24,7 +24,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
-                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="<?php echo  base_url();?>"><img src="<?php echo IMG_PATH?>logo.png" alt="" width="" style='width:43px;'> RSSB </a>
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="<?php echo  base_url();?>"><img src="<?php echo IMG_PATH?>logo.jpg" alt="" width="" style='width:75px;'>  </a>
       <div class="nav-collapse">
         <ul class="nav pull-right">
 			<?php if(is_user_login(false)){?>

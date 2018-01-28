@@ -184,7 +184,7 @@
 									<div class="control-group">											
 										<label class="control-label">States</label>
 										<div class="controls">
-											<select id="statesid">
+											<select id="state_id">
 												<?php if(isset($getstate) && !empty($getstate)){
 													foreach($getstate as $s){?>
 														<option value="<?php echo $s['id']?>"><?php echo $s['name']?> </option>
@@ -197,13 +197,12 @@
 									<div class="control-group">											
 										<label class="control-label">Cities</label>
 										<div class="controls">
-											<label class="radio inline">
-											  <input type="radio" value='1' <?php echo (isset($user_data['gender']) && $user_data['gender']==1) ? "checked" : ""?> name="gender"> Male
-											</label>
-											
-											<label class="radio inline">
-											  <input type="radio" value='2' <?php echo (isset($user_data['gender']) && $user_data['gender']==2) ? "checked" : ""?> name="gender"> Female
-											</label>
+											<select id="city_id">
+												<?php if(isset($getstate) && !empty($getstate)){
+													foreach($getstate as $s){?>
+														<option value="<?php echo $s['id']?>"><?php echo $s['name']?> </option>
+												<?php }} ?> 
+											</select>
 										</div> 			
 									</div>
 								</div>
@@ -300,6 +299,8 @@
 
 
     $(document).ready(function(){
+
+    	$("state_id")
 
      
         $(document.body).on('click','#submit',function(){
