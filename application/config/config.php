@@ -370,7 +370,7 @@ $config['proxy_ips'] = '';
 /* Location: ./application/config/config.php */
 
 
-define('SITE_NAME','RSSB Diet App');
+define('SITE_NAME','RSSB');
 
 date_default_timezone_set('Asia/Kolkata');
 

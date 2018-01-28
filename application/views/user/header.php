@@ -65,15 +65,15 @@
     <ul class="dropdown-menu">
       <li><a href="<?php echo base_url().'admin/users/'?>">Manage Users</a></li>
       <li><a href="<?php echo base_url().'admin/users/edit'?>">Add New User</a></li>
-      <li><a href="javascript:;">Manage Deleted Users</a></li>
+     <!--  <li><a href="javascript:;">Manage Deleted Users</a></li> -->
     </ul>
     </li>
-     <!-- <li class="<?php echo (isset($header_page_id) && trim(strtolower($header_page_id)) == 'users') ? "active" : ""?> dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-long-arrow-down"></i><span>Meals Pillar</span> <b class="caret"></b></a>
-  <!--   <ul class="dropdown-menu">
+  <!--    <li class="<?php echo (isset($header_page_id) && trim(strtolower($header_page_id)) == 'users') ? "active" : ""?> dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-long-arrow-down"></i><span>Meals Pillar</span> <b class="caret"></b></a>
+    <ul class="dropdown-menu">
       <li><a href="<?php echo base_url().'admin/pillars/'?>">Manage Pillar</a></li>
       <li><a href="<?php echo base_url().'admin/pillars/edit'?>">Add New Pillar</a></li>
      
-    </ul> -->
+    </ul>
     </li> -->
 		
 		
