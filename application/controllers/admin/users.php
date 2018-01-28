@@ -24,6 +24,9 @@ class Users extends CI_Controller {
             // $condition['User.user_group_id !=']=SUPER_ADMIN;
             // $condition['User.id !=']=$admin_user;
             // $condition['User.status !=']=DELETED_USER;\
+            $this->db->select('User.*,cities.name as city_name');
+            $this->db->join('cities', 'city_id = cities.id','left');
+            //$this->db->join('states', 'users.state_id = states.id','left');
             $condition['is_active !=']="-1";
             $condition['user_type !=']="1";
             if($this->input->get())
@@ -31,6 +34,8 @@ class Users extends CI_Controller {
                 $request=$this->input->post();
                 if(isset($request['keyword']) && $request['keyword']!='')
                 {   $this->db->like('full_name',$request['keyword'],'both');
+                    $this->db->or_like('cities.name',$request['keyword'],'both');
+                     //$this->db->like('states.name',$request['keyword'],'both');
                     // $this->or_like('User.email',$request['keyword'],'both'); 
                     // $this->or_like('User.email',$request['keyword'],'both');  
                     // $condition['OR']['User.username LIKE']="%".$request['keyword']."%";
@@ -52,7 +57,8 @@ class Users extends CI_Controller {
 
             $this->db->where($condition);
             
-			$query=$this->db->get('ma_users');
+			$query=$this->db->get('ma_users as User');
+            //echo $this->db->last_query();
 			$data=$query->result_array();
 
 			$total = $query->num_rows();
@@ -118,15 +124,15 @@ class Users extends CI_Controller {
                 }
 
 
-                if(isset($request['status']) && $request['status']!='')
+                if(isset($request['pillar_no']) && $request['pillar_no']!='')
                 {
-                    $condition['User.status']=$request['status'];
+                    $condition['pillar_no']=$request['pillar_no'];
                 }
 
-                if(isset($request['user_group_id']) && $request['user_group_id']!='')
-                {
-                    $condition['User.user_group_id']=$request['user_group_id'];
-                }
+                // if(isset($request['user_group_id']) && $request['user_group_id']!='')
+                // {
+                //     $condition['User.user_group_id']=$request['user_group_id'];
+                // }
 
             }
 
@@ -150,11 +156,18 @@ class Users extends CI_Controller {
 		
 
 		$return['header_page_id'] = 'edit_profile';
+        $return['is_edit'] = false;
 		$return['header_page_title'] = 'Edit User';
 		$user_id = $this->uri->segment('4');
 		$return['user_data'] = $this->common_model->get_user_details($user_id);
 
-        $return['user_count'] = range(1,30);
+        if($user_id>0){
+            $return['is_edit']=true;
+
+        }
+
+
+        $return['user_count'] = range(0,30);
 		//pr( $return['user_count']);
 		
 		// if(isset($_POST['submit']) && strtoupper(trim($_POST['submit'])) == strtoupper('Edit Details')) {
@@ -369,6 +382,15 @@ class Users extends CI_Controller {
 		//echo '<pre>';print_r($return);die;
 		$this->load->view('user/change_password',$return);
 	}
+    public function getCities($value='')
+    {
+        # code...
+        $state_id=$this->input->post('state_id');
+        $cities=$this->common_model->get_cities_by_state($state_id);
+     
+       echo json_encode($cities);
+       die;
+    }
 
 }
 

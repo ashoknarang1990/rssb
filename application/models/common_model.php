@@ -169,9 +169,9 @@ class Common_Model extends CI_Model{
     	return  $this->db->get()->result_array();
     }
 
-    public function get_city($id=0){
+    public function get_cities_by_state($id=0){
     	$this->db->select('*');
-    	$this->db->from('cities');
+    	$this->db->from('ma_cities');
     	$this->db->where(array('state_id'=>$id));
     	return  $this->db->get()->result_array();
     }

@@ -22,30 +22,36 @@
                               <!-- <label class="sr-only" for="name">Pillar No</label> -->
                               <input type="text" class="form-control" id="pillar_no" name="pillar_no" placeholder="Pillar No">
                           </div> 
+                          </div>
+                          <div class="span3">
+                            <button type="submit" class="btn blue " id="LoadRecordsButton"><i class="fa fa-search"></i> Filter</button>
+                            <button type="reset" class="btn default" id="reset_button"><i class="fa fa-refresh"></i> Reset</button>
+                            
                           </div> 
-                            <div class="span3">                     
+
+                           <!--  <div class="span3">                     
                           <div class="control-group">
-                              <!-- <label class="sr-only" for="enabled">Entry Date From </label> -->
+                            
                               <input type="text" class="form-control" id="datepicker" name="start_from" placeholder="Entry date from">
                           </div>
                           </div>
                           <div class="span3"> 
                            <div class="control-group">
-                             <!--  <label class="sr-only" for="enabled">Entry Date To </label> -->
+                             
                               <input type="text" class="form-control" id="datepicker1" name="start_to" placeholder="Entry date to ">
                           </div>
-                          </div>                       
+                          </div>              -->          
                       </div>
                      
                     
                                            
-                        <div class="form-group">
+                      <!--   <div class="form-group">
                           <div class="span3">
                             <button type="submit" class="btn blue " id="LoadRecordsButton"><i class="fa fa-search"></i> Filter</button>
                             <button type="reset" class="btn default" id="reset_button"><i class="fa fa-refresh"></i> Reset</button>
                             
                           </div>
-                        </div>
+                        </div> -->
                      
                     </form>
                      </div>
@@ -113,7 +119,7 @@
                     multiSorting: true,
                     defaultSorting: 'Name ASC',
                     actions: {
-                        listAction: 'users/xhr?cmd=users',
+                        listAction: 'users/xhr?cmd=index',
                         // deleteAction: '/Demo/DeleteStudent',
                         // updateAction: '/Demo/UpdateStudent',
                         // createAction: '/Demo/CreateStudent'
@@ -132,15 +138,19 @@
                         pillar_no: {
                             title: 'Pillar No',
 
-                            width: '15%'
+                            width: '5%'
                         },
                         adult: {
                             title: 'Adult',
                             width: '5%'
                         },
+                        city_name: {
+                            title: 'City Name',
+                            width: '5%'
+                        },
                         children: {
                             title: 'Children',
-                            width: '5%'
+                            width: '10%'
                         },
 
                         phone_number: {
@@ -201,7 +211,7 @@
                 });
 
                 $('#reset_button').click(function(e) {
-                $('#dt').jtable('load');
+                $('#users').jtable('load');
                 });
 
 

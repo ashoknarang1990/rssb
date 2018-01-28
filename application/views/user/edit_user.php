@@ -78,7 +78,7 @@
 									<div class="control-group">											
 										<label class="control-label">Contact Number</label>
 										<div class="controls">
-											<input type="text" data-error="Phone number" class='required form-control inp_fetch_text span4' placeholder="Enter Contact Number" value="<?php echo isset($user_data['phone_number']) ? $user_data['phone_number'] : ''?>" name="phone_number" />
+											<input type="text"  class='form-control inp_fetch_text span4' placeholder="Enter Contact Number" value="<?php echo isset($user_data['phone_number']) ? $user_data['phone_number'] : ''?>" name="phone_number" />
 										</div>				
 									</div>
 								</div>
@@ -150,7 +150,7 @@
 									<div class="control-group">											
 										<label class="control-label">Pillar no</label>
 										<div class="controls">
-											<input type="text" class=' form-control inp_fetch_text span4' placeholder="Enter Pillar No" value="<?php echo isset($user_data['pillar_no']) ? $user_data['pillar_no'] : ''?>" name="pillar_no" />
+											<input type="number" data-error="Pillar number" class='required form-control inp_fetch_text span4' placeholder="Enter Pillar No" value="<?php echo isset($user_data['pillar_no']) ? $user_data['pillar_no'] : ''?>" name="pillar_no" />
 										</div>				
 									</div>
 								</div>
@@ -184,10 +184,17 @@
 									<div class="control-group">											
 										<label class="control-label">States</label>
 										<div class="controls">
-											<select id="state_id">
+											<select id="state_id" name="state_id" onchange="getCity(this,<?php echo isset($user_data['city_id']) ? $user_data['city_id'] : '0';?>)">
 												<?php if(isset($getstate) && !empty($getstate)){
-													foreach($getstate as $s){?>
-														<option value="<?php echo $s['id']?>"><?php echo $s['name']?> </option>
+													foreach($getstate as $s){
+
+														$sel="";
+
+														if(isset($user_data['state_id']) && $user_data['state_id']==$s['id']){
+															$sel="selected='selected'";
+														}	
+														?>
+														<option <?php echo $sel; ?> value="<?php echo $s['id']?>"><?php echo $s['name']?> </option>
 												<?php }} ?> 
 											</select>
 										</div>				
@@ -197,11 +204,8 @@
 									<div class="control-group">											
 										<label class="control-label">Cities</label>
 										<div class="controls">
-											<select id="city_id">
-												<?php if(isset($getstate) && !empty($getstate)){
-													foreach($getstate as $s){?>
-														<option value="<?php echo $s['id']?>"><?php echo $s['name']?> </option>
-												<?php }} ?> 
+											<select id="city_id" name="city_id" class="states_option">
+												<option>Select City</option> 
 											</select>
 										</div> 			
 									</div>
@@ -297,11 +301,51 @@
 <?php $this->load->view('user/footer');?>
 <script type="text/javascript">
 
+	    function getCity(obj,city_id){
+        var state_id=$(obj).val();
+        
+        
+        $.ajax({
+                    type: "POST",
+                    url: '<?php echo ADMIN_SITE_PATH ?>'+'users/getCities',
+                    data: {
+                         
+                        
+                        "state_id":state_id,
+                        ///"state_id":''
+                        
+                    },
+                   dataType: 'HTML',
+                    beforeSend: function () {},
+                    success: function (res) {
+
+                             var html_state='<option value="">Select City</option>';
+                             data=JSON.parse(res);
+                            //console.log(res);
+                          
+                            $.each(data,function(i,item) {
+
+                                 var sel_opt='';
+                                if(item.id==city_id){
+                                    sel_opt="selected"
+
+                                }
+
+                                  html_state+='<option '+sel_opt+' value='+item.id+'>'+item.name+'</option>';  
+                            });
+
+                           $(".states_option").html(html_state);
+
+                    },
+                    error: function (res) {
+                        toastr.error("Failure");
+                    }
+                });
+    }
 
     $(document).ready(function(){
 
-    	$("state_id")
-
+    	 
      
         $(document.body).on('click','#submit',function(){
         	
@@ -392,6 +436,11 @@
        
         
     });
+   <?php if($is_edit==true){?>
+    	
+    	//$("#city_id").trigger('changed');
+    	getCity($("#state_id"),<?php echo $user_data['city_id']?>);
+ 	<?php   }    ?>
    // AjaxFileUploder('blog_image');
 </script>
 </body>
