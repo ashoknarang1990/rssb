@@ -115,9 +115,9 @@
                     title: 'User List',
                     paging: true,
                     pageSize: 10,
-                    sorting: true,
+                    sorting: false,
                     multiSorting: true,
-                    defaultSorting: 'Name ASC',
+                    defaultSorting: 'id desc',
                     actions: {
                         listAction: 'users/xhr?cmd=index',
                         // deleteAction: '/Demo/DeleteStudent',
