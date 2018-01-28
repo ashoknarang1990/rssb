@@ -150,7 +150,7 @@
 									<div class="control-group">											
 										<label class="control-label">Pillar no</label>
 										<div class="controls">
-											<input type="number" data-error="Pillar number" class='required form-control inp_fetch_text span4' placeholder="Enter Pillar No" value="<?php echo isset($user_data['pillar_no']) ? $user_data['pillar_no'] : ''?>" name="pillar_no" />
+											<input type="number" data-error="Pillar number" class='required form-control inp_fetch_text span4' placeholder="Enter Pillar No" value="<?php echo isset($user_data['pillar_no']) ? $user_data['pillar_no'] : '0'?>" name="pillar_no" />
 										</div>				
 									</div>
 								</div>
@@ -185,6 +185,7 @@
 										<label class="control-label">States</label>
 										<div class="controls">
 											<select id="state_id" name="state_id" onchange="getCity(this,<?php echo isset($user_data['city_id']) ? $user_data['city_id'] : '0';?>)">
+											<option value="0">select state</option>
 												<?php if(isset($getstate) && !empty($getstate)){
 													foreach($getstate as $s){
 
